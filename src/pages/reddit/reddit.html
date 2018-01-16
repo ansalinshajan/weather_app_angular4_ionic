@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>EngageIQ Api Calls</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Category</ion-label>
+      <ion-select (ionChange)="changeCategory()" [(ngModel)]="category" name="category">
+        <ion-option value="sports">Sports</ion-option>
+        <ion-option value="food">Food</ion-option>
+        <ion-option value="news">News</ion-option>
+        <ion-option value="music">Music</ion-option>
+        <ion-option value="funny">Funny</ion-option>
+        <ion-option value="gaming">Gaming</ion-option>
+        <ion-option value="art">Art</ion-option>
+        <ion-option value="nba">NBA</ion-option>
+        <ion-option value="Bitcoin">Bitcoin</ion-option>
+        <ion-option value="sex">Sex</ion-option>
+        <ion-option value="Celebs">Celebs</ion-option>
+        <ion-option value="programming">Programming</ion-option>
+        <ion-option value="Philippines">Philippines</ion-option>
+        <ion-option value="mildlyvagina">Vagina</ion-option>
+        <ion-option value="bigdickproblem">Dick</ion-option>
+        <ion-option value="india">India</ion-option>
+        <ion-option value="rage">Rage</ion-option>
+        <ion-option value="movies">Movies</ion-option>
+        <ion-option value="drunk">Drunk</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngFor="let item of items">
+        <ion-thumbnail *ngIf="item['data'].thumbnail" item-left>
+          <img src="{{item['data'].thumbnail}}">
+        </ion-thumbnail>
+        <h2>{{item['data'].title}}</h2>
+        <p>
+          <ion-icon name="thumbs-up" color="light">{{item['data'].score}}</ion-icon>&nbsp;&nbsp;
+          <ion-icon name="chatboxes" color="light">{{item['data'].num_comments}}</ion-icon>
+        </p>
+        <button ion-button clear item-right (click)="viewItem(item)">View</button>
+      </ion-item>
+  </ion-list>
+</ion-content>

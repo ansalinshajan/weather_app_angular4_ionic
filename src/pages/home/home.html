@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>EngageIQ iWeather</ion-title>
+    <ion-title>EngageIQ iWeather Simple App</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,7 +11,7 @@
           <h2 class="location">{{ weather.current_observation.display_location.full }}</h2>
           <div class="icon"><img src="{{weather.current_observation.icon_url}}" alt=""></div>
           <h3 class="desc">{{ weather.current_observation.weather }}</h3>
-          <h1 class="temp">{{ weather.current_observation.temp_f }}</h1>
+          <h1 class="temp">{{ weather.current_observation.temp_f }}&deg;</h1>
         </ion-col>
       </ion-row>
       <ion-row>

@@ -1,18 +1,75 @@
-<!--
-  Generated template for the SettingsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>settings</ion-title>
+    <ion-title>Settings</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+    <h2>EngageIQ Weather</h2>
+    <ion-grid>
+        <ion-row>
+            <ion-col width-100>
+                <ion-list>
+                    <form (ngSubmit)="saveForm()">
+                        <ion-item>
+                            <ion-label fixed> 
+                                City
+                            </ion-label>
+                            <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label fixed>
+                                State
+                            </ion-label>
+                            <ion-input [(ngModel)]="state" name="state" type="text"></ion-input>
+                        </ion-item>
+                        <button ion-button type="submit" block>Save Changes</button>
+                    </form>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <h2>Reddit</h2>
+    <form (ngSubmit)="setDefaults()">
+        <ion-list>
+            <ion-item>
+				<ion-label fixed>Category</ion-label>  
+				<ion-select [(ngModel)]="category" name="category">
+					<ion-option value="sports">Sports</ion-option>
+					<ion-option value="food">Food</ion-option>
+					<ion-option value="news">News</ion-option>
+					<ion-option value="music">Music</ion-option>
+					<ion-option value="funny">Funny</ion-option>
+					<ion-option value="gaming">Gaming</ion-option>
+					<ion-option value="art">Art</ion-option>
+					<ion-option value="nba">NBA</ion-option>
+					<ion-option value="Bitcoin">Bitcoin</ion-option>
+					<ion-option value="sex">Sex</ion-option>
+					<ion-option value="Celebs">Celebs</ion-option>
+					<ion-option value="programming">Programming</ion-option>
+					<ion-option value="Philippines">Philippines</ion-option>
+					<ion-option value="mildlyvagina">Vagina</ion-option>
+					<ion-option value="bigdickproblem">Dick</ion-option>
+					<ion-option value="india">India</ion-option>
+					<ion-option value="rage">Rage</ion-option>
+					<ion-option value="movies">Movies</ion-option>
+					<ion-option value="drunk">Drunk</ion-option>
+				</ion-select>
+            </ion-item>
+            <ion-item>
+				<ion-label fixed>Limits</ion-label>  
+				<ion-select [(ngModel)]="limit" name="limit">
+					<ion-option value="5">5</ion-option>
+					<ion-option value="10">10</ion-option>
+					<ion-option value="15">15</ion-option>
+					<ion-option value="20">20</ion-option>
+					<ion-option value="25">25</ion-option>
+					<ion-option value="50">50</ion-option>
+					<ion-option value="100">100</ion-option>
+					<ion-option value="1000">1000</ion-option>
+				</ion-select>
+            </ion-item>
+            <button ion-button type="submit" block>Save Changes</button>
+        </ion-list>  
+    </form>
 </ion-content>

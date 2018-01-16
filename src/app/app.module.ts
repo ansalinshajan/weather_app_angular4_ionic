@@ -10,10 +10,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from '../pages/settings/settings';
+import { RedditPage } from '../pages/reddit/reddit';
+import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherProvider } from '../providers/weather/weather';
+import { RedditProvider } from '../providers/reddit/reddit';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { WeatherProvider } from '../providers/weather/weather';
     ContactPage,
     HomePage,
     TabsPage,
-    SettingsPage
+    SettingsPage,
+    RedditPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -37,13 +42,16 @@ import { WeatherProvider } from '../providers/weather/weather';
     ContactPage,
     HomePage,
     TabsPage,
-    SettingsPage
+    SettingsPage,
+    RedditPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WeatherProvider
+    WeatherProvider,
+    RedditProvider
   ]
 })
 export class AppModule {}
