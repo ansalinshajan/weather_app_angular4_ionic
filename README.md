@@ -9,9 +9,11 @@
    ionic serve
 
 4. To emulate Android
+
    ionic cordova run android
 
 5. To emulate IOS
+
    ionic cordova run ios
 
 6. Make sure you havs Android studio installed.
